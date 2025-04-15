@@ -298,6 +298,7 @@
             justify-content: center;
             color: white;
             font-weight: bold;
+            z-index: 2;
         }
 
         .dark .center-circle {
@@ -312,6 +313,7 @@
             height: 100%;
             border: 1px dashed rgba(176, 141, 101, 0.3);
             border-radius: 50%;
+            z-index: 1;
         }
 
         .dark .orbit {
@@ -331,24 +333,29 @@
             font-weight: bold;
         }
 
-        .dark .orbital {
-            background: #E29B50;
+        /* Gán tọa độ tuyệt đối dựa theo quỹ đạo tròn */
+        .orbital.giaicap {
+            top: 50%;
+            left: calc(50% + 150px);
+            transform: translate(-50%, -50%);
         }
 
-        .orbital.nhanluc {
-            transform: translateX(150px);
+        .orbital.dantoc {
+            top: calc(50% + 150px);
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
-        .orbital.vandedan {
-            transform: translateY(150px);
+        .orbital.tongiao {
+            top: 50%;
+            left: calc(50% - 150px);
+            transform: translate(-50%, -50%);
         }
 
-        .orbital.xuthe {
-            transform: translateX(-150px);
-        }
-
-        .orbital.quanhedang {
-            transform: translateY(-150px);
+        .orbital.vanhoa {
+            top: calc(50% - 150px);
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         @media (max-width: 768px) {
@@ -370,19 +377,19 @@
             }
 
             .orbital.nhanluc {
-                transform: translateX(120px);
+                left: calc(50% + 100px);
             }
 
             .orbital.vandedan {
-                transform: translateY(120px);
+                top: calc(50% + 100px);
             }
 
             .orbital.xuthe {
-                transform: translateX(-120px);
+                left: calc(50% - 100px);
             }
 
             .orbital.quanhedang {
-                transform: translateY(-120px);
+                top: calc(50% - 100px);
             }
         }
 
