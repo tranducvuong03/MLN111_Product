@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chủ nghĩa Duy vật Lịch sử: Giai cấp và Dân tộc</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-sepia-50 dark:bg-sepia-900 text-sepia-900 dark:text-sepia-100 transition-colors duration-300">
+    <!-- Progress bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Dark mode toggle -->
+    <div class="mode-toggle bg-sepia-200 dark:bg-sepia-800 text-sepia-800 dark:text-sepia-200" id="modeToggle">
+        <svg xmlns="http://www.w3.org/2000/svg" id="lightIcon" class="h-5 w-5 hidden dark:block" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" id="darkIcon" class="h-5 w-5 block dark:hidden" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+    </div>
+
+    <!-- Navigation dots -->
+    <div class="nav-dots hidden md:flex">
+        <div class="nav-dot" data-slide="slide1"></div>
+        <div class="nav-dot" data-slide="slide2"></div>
+        <div class="nav-dot" data-slide="slide3"></div>
+        <div class="nav-dot" data-slide="slide4"></div>
+        <div class="nav-dot" data-slide="slide5"></div>
+        <div class="nav-dot" data-slide="slide6"></div>
+        <div class="nav-dot" data-slide="slide7"></div>
+    </div>
+
+    <!-- Slide 1: Title -->
+    <section id="slide1" class="slide px-4 py-20 md:px-20 md:py-24 bg-parchment">
+        <div class="bg-pattern"></div>
+
+        <div class="floating-element floating-1 animate-float">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <circle cx="20" cy="20" r="15" fill="#B08D65" fill-opacity="0.2" />
+            </svg>
+        </div>
+
+        <div class="floating-element floating-2 animate-float-slow">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <rect x="15" y="15" width="30" height="30" fill="#D67B1F" fill-opacity="0.2" />
+            </svg>
+        </div>
+
+        <div class="floating-element floating-3 animate-float-fast">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <polygon points="15,0 30,30 0,30" fill="#B08D65" fill-opacity="0.2" />
+            </svg>
+        </div>
+
+        <div class="slide-content max-w-5xl mx-auto">
+            <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                <div class="text-center md:text-left mb-10 md:mb-0">
+                    <div
+                        class="inline-block px-4 py-1 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-sm font-semibold mb-4 fade-in-slow">
+                        Chương 3: Chủ nghĩa duy vật lịch sử</div>
+
+                    <h1 class="text-4xl md:text-6xl font-bold mb-8">Giai cấp và Dân tộc</h1>
+
+                    <div
+                        class="text-lg md:text-xl text-sepia-700 dark:text-sepia-300 max-w-3xl mx-auto md:mx-0 fade-up">
+                        <p class="mb-2">II.2. Dân tộc</p>
+                        <p>II.3. Mối quan hệ giai cấp - dân tộc - nhân loại</p>
+                    </div>
+
+                    <div class="mt-8 scale-in">
+                        <svg class="w-20 h-20 text-primary-500 mx-auto md:mx-0" viewBox="0 0 100 100">
+                            <circle class="icon-circle" cx="50" cy="50" r="40" stroke="currentColor" stroke-width="3"
+                                fill="none" />
+                            <path class="icon-path opacity-0" d="M30,50 L45,65 L70,35" stroke="currentColor"
+                                stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="fade-up">
+                    <div class="img-frame rounded-lg overflow-hidden relative mx-auto md:ml-auto md:mr-0 max-w-md">
+                        <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop"
+                            alt="Tượng Karl Marx" class="w-full object-cover img-vintage aspect-[4/3]">
+                        <div class="img-caption">Tượng đài Karl Marx - Người sáng lập chủ nghĩa duy vật lịch sử</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center text-sepia-500 dark:text-sepia-500 fade-in-slow">
+                <p>Cuộn xuống để tiếp tục</p>
+                <svg class="w-6 h-6 mx-auto mt-2 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 2: Dân tộc: Định nghĩa -->
+    <section id="slide2" class="slide px-4 py-20 md:px-20 md:py-24 bg-sepia-100 dark:bg-sepia-800">
+        <div class="bg-pattern"></div>
+        <div class="slide-content max-w-5xl mx-auto">
+            <div class="mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 slide-from-left">II.2. Dân tộc: Khái niệm và Đặc điểm
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="slide-from-left">
+                        <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary-600 dark:text-primary-400">Khái
+                            niệm dân tộc</h3>
+                        <div class="quote mb-6">
+                            <p>"Dân tộc là một cộng đồng người ổn định, hình thành trong lịch sử, có chung ngôn ngữ,
+                                lãnh thổ, đời sống kinh tế và tâm lý biểu hiện trong nền văn hoá chung."</p>
+                        </div>
+                        <p class="mb-4">Dân tộc là một phạm trù lịch sử, xuất hiện trong giai đoạn tan rã của chế độ
+                            công xã nguyên thuỷ và hình thành xã hội có giai cấp.</p>
+
+                        <div class="mt-6 img-frame rounded-lg overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1530968033775-2c92736b131e?w=800&auto=format&fit=crop"
+                                alt="Lá cờ biểu tượng dân tộc" class="w-full object-cover img-vintage aspect-[16/9]">
+                            <div class="img-caption">Lá cờ - Biểu tượng của bản sắc dân tộc</div>
+                        </div>
+                    </div>
+
+                    <div class="slide-from-right">
+                        <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary-600 dark:text-primary-400">Đặc
+                            điểm cơ bản của dân tộc</h3>
+                        <div class="timeline">
+                            <div class="timeline-item fade-up">
+                                <div class="timeline-dot"></div>
+                                <h4 class="font-medium mb-2">Tính ổn định lâu dài</h4>
+                                <p>Dân tộc có tính ổn định cao hơn các cộng đồng người khác như bộ lạc, bộ tộc.</p>
+                            </div>
+                            <div class="timeline-item fade-up">
+                                <div class="timeline-dot"></div>
+                                <h4 class="font-medium mb-2">Tính lịch sử</h4>
+                                <p>Dân tộc không phải là hiện tượng có tính tự nhiên mà là sản phẩm của quá trình phát
+                                    triển lịch sử.</p>
+                            </div>
+                            <div class="timeline-item fade-up">
+                                <div class="timeline-dot"></div>
+                                <h4 class="font-medium mb-2">Tính kinh tế</h4>
+                                <p>Sự hình thành dân tộc gắn liền với sự phát triển của nền kinh tế hàng hoá và thị
+                                    trường dân tộc.</p>
+                            </div>
+                            <div class="timeline-item fade-up">
+                                <div class="timeline-dot"></div>
+                                <h4 class="font-medium mb-2">Văn hoá tâm lý chung</h4>
+                                <p>Tạo ra bản sắc văn hoá và tâm lý, ý thức dân tộc.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 md:mt-12 appear-after">
+                <div class="book-page p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-primary-600 dark:text-primary-400">Các yếu tố cấu thành
+                        dân tộc</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="highlight-box mb-4">
+                            <h4 class="font-medium mb-2">Ngôn ngữ chung</h4>
+                            <p>Là phương tiện giao tiếp, là cơ sở và phương thức thể hiện văn hoá dân tộc, góp phần tạo
+                                nên ý thức cộng đồng.</p>
+                        </div>
+                        <div class="highlight-box mb-4">
+                            <h4 class="font-medium mb-2">Lãnh thổ chung</h4>
+                            <p>Không gian địa lý cụ thể mà cộng đồng dân tộc sinh sống, gắn bó trong quá trình lịch sử.
+                            </p>
+                        </div>
+                        <div class="highlight-box mb-4">
+                            <h4 class="font-medium mb-2">Đời sống kinh tế</h4>
+                            <p>Sự phát triển của thị trường dân tộc thống nhất và các mối quan hệ kinh tế dân tộc.</p>
+                        </div>
+                        <div class="highlight-box mb-4">
+                            <h4 class="font-medium mb-2">Tâm lý và văn hoá</h4>
+                            <p>Biểu hiện qua phong tục, tập quán, tín ngưỡng, các giá trị tinh thần chung của cộng đồng.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 3: Các loại hình dân tộc -->
+    <section id="slide3" class="slide px-4 py-20 md:px-20 md:py-24 bg-parchment">
+        <div class="bg-pattern"></div>
+        <div class="slide-content max-w-5xl mx-auto">
+            <div class="mb-8 slide-from-left">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">Các hình thức phát triển của dân tộc</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-10">
+                <div class="slide-from-left">
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="bg-sepia-50 dark:bg-sepia-800 rounded-lg p-6 shadow-md fade-up">
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-2 text-primary-600 dark:text-primary-400">1. Dân
+                                        tộc tư sản</h3>
+                                    <p class="mb-2">Hình thành cùng với sự phát triển của chủ nghĩa tư bản và thị trường
+                                        dân tộc.</p>
+                                    <p>Giai cấp tư sản nắm quyền lực và định hình ý thức dân tộc theo lợi ích của mình.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-sepia-50 dark:bg-sepia-800 rounded-lg p-6 shadow-md fade-up">
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-2 text-primary-600 dark:text-primary-400">2. Dân
+                                        tộc XHCN</h3>
+                                    <p class="mb-2">Xóa bỏ áp bức bóc lột giai cấp và đoàn kết các dân tộc.</p>
+                                    <p>Giai cấp công nhân lãnh đạo thông qua Đảng Cộng sản, kết hợp chủ nghĩa yêu nước
+                                        với chủ nghĩa quốc tế.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-sepia-50 dark:bg-sepia-800 rounded-lg p-6 shadow-md fade-up">
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-2 text-primary-600 dark:text-primary-400">3. Dân
+                                        tộc trong toàn cầu hóa</h3>
+                                    <p class="mb-2">Tăng cường tính liên kết, hội nhập quốc tế đồng thời đối mặt với
+                                        thách thức giữ gìn bản sắc dân tộc.</p>
+                                    <p>Xuất hiện các liên kết kinh tế xuyên quốc gia và vấn đề chủ quyền dân tộc.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-from-right space-y-6">
+                    <div class="img-frame rounded-lg overflow-hidden relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&auto=format&fit=crop"
+                            alt="Cách mạng công nghiệp" class="w-full object-cover img-vintage aspect-[4/3]">
+                        <div class="img-caption">Cách mạng công nghiệp - Nền tảng của dân tộc tư sản</div>
+                    </div>
+
+                    <div class="mt-6 p-6 bg-primary-50 dark:bg-primary-900/30 rounded-lg appear-after">
+                        <h3 class="text-xl font-semibold mb-4 text-primary-700 dark:text-primary-300">Quan điểm Mác-xít
+                            về dân tộc</h3>
+                        <div class="grid grid-cols-1 gap-4">
+                            <div>
+                                <div class="mb-2 font-medium text-primary-600 dark:text-primary-400">Tính khách quan và
+                                    lịch sử</div>
+                                <p>Dân tộc là hiện tượng khách quan, sản phẩm của quá trình phát triển lịch sử xã hội,
+                                    không phải là sản phẩm của tự nhiên hay ý niệm.</p>
+                            </div>
+                            <div>
+                                <div class="mb-2 font-medium text-primary-600 dark:text-primary-400">Tính giai cấp</div>
+                                <p>Trong mỗi dân tộc đều tồn tại các giai cấp với lợi ích khác nhau. Chính sách dân tộc
+                                    phải gắn với lợi ích giai cấp tiến bộ.</p>
+                            </div>
+                            <div>
+                                <div class="mb-2 font-medium text-primary-600 dark:text-primary-400">Phê phán chủ nghĩa
+                                    dân tộc hẹp hòi</div>
+                                <p>Phản đối quan điểm dân tộc cực đoan, phân biệt chủng tộc và dân tộc bài ngoại.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="img-frame rounded-lg overflow-hidden relative mt-6">
+                        <img src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=800&auto=format&fit=crop"
+                            alt="Liên kết toàn cầu" class="w-full object-cover img-vintage aspect-[16/9]">
+                        <div class="img-caption">Thời đại toàn cầu hóa và thách thức với các dân tộc</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 4: Vấn đề dân tộc -->
+    <section id="slide4" class="slide px-4 py-20 md:px-20 md:py-24 bg-sepia-100 dark:bg-sepia-800">
+        <div class="bg-pattern"></div>
+        <div class="slide-content max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 slide-from-left">Vấn đề dân tộc và đấu tranh dân tộc</h2>
+
+            <div class="grid md:grid-cols-2 gap-10 mb-10">
+                <div class="slide-from-left">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-6 text-primary-600 dark:text-primary-400">Cơ sở của
+                        vấn đề dân tộc</h3>
+                    <div class="mb-6">
+                        <div class="quote mb-4">
+                            <p>"Vấn đề dân tộc là tổng thể những mối quan hệ xã hội phát sinh từ sự tương tác giữa các
+                                dân tộc và từ việc giải quyết quyền tự quyết dân tộc."</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-sepia-50 dark:bg-sepia-700 p-4 rounded-lg shadow-sm fade-up">
+                            <h4 class="font-medium mb-2 text-primary-600 dark:text-primary-400">Cơ sở kinh tế</h4>
+                            <p>Sự phát triển không đồng đều giữa các dân tộc, tình trạng bóc lột, phụ thuộc kinh tế.</p>
+                        </div>
+                        <div class="bg-sepia-50 dark:bg-sepia-700 p-4 rounded-lg shadow-sm fade-up">
+                            <h4 class="font-medium mb-2 text-primary-600 dark:text-primary-400">Cơ sở chính trị</h4>
+                            <p>Vấn đề chủ quyền, độc lập dân tộc và các hình thức áp bức dân tộc.</p>
+                        </div>
+                        <div class="bg-sepia-50 dark:bg-sepia-700 p-4 rounded-lg shadow-sm fade-up">
+                            <h4 class="font-medium mb-2 text-primary-600 dark:text-primary-400">Cơ sở xã hội-văn hóa
+                            </h4>
+                            <p>Những xung đột về văn hóa, tôn giáo, sắc tộc, ngôn ngữ giữa các dân tộc.</p>
+                        </div>
+                    </div>
+
+                    <div class="img-frame rounded-lg overflow-hidden relative mt-8">
+                        <img src="https://images.unsplash.com/photo-1524499982521-1ffd58dd89ea?w=800&auto=format&fit=crop"
+                            alt="Biểu tình đòi quyền dân tộc" class="w-full object-cover img-vintage aspect-[16/9]">
+                        <div class="img-caption">Phong trào đấu tranh cho quyền dân tộc</div>
+                    </div>
+                </div>
+
+                <div class="slide-from-right">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-6 text-primary-600 dark:text-primary-400">Đấu tranh
+                        dân tộc trong thời đại mới</h3>
+
+                    <div class="mb-6 bg-sepia-50 dark:bg-sepia-700 p-5 rounded-lg shadow-sm">
+                        <h4 class="font-medium mb-3 text-primary-600 dark:text-primary-400">Các hình thức đấu tranh dân
+                            tộc</h4>
+                        <ul class="space-y-3">
+                            <li class="fade-up">
+                                <div class="flex items-start">
+                                    <svg class="w-5 h-5 text-primary-500 mr-2 mt-1" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span><span class="font-medium">Đấu tranh giải phóng dân tộc:</span> Chống lại sự áp
+                                        bức, đô hộ của chủ nghĩa thực dân, đế quốc.</span>
+                                </div>
+                            </li>
+                            <li class="fade-up">
+                                <div class="flex items-start">
+                                    <svg class="w-5 h-5 text-primary-500 mr-2 mt-1" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span><span class="font-medium">Phong trào bảo vệ chủ quyền:</span> Đấu tranh chống
+                                        lại sự can thiệp, xâm phạm chủ quyền.</span>
+                                </div>
+                            </li>
+                            <li class="fade-up">
+                                <div class="flex items-start">
+                                    <svg class="w-5 h-5 text-primary-500 mr-2 mt-1" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span><span class="font-medium">Đấu tranh bình đẳng dân tộc:</span> Tạo sự công bằng
+                                        và tôn trọng quyền của các dân tộc thiểu số.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="img-frame rounded-lg overflow-hidden relative mb-8">
+                        <img src="https://images.unsplash.com/photo-1447069387593-a5de0862481e?w=800&auto=format&fit=crop"
+                            alt="Hội nghị quốc tế" class="w-full object-cover img-vintage aspect-[4/3]">
+                        <div class="img-caption">Hợp tác quốc tế giải quyết vấn đề dân tộc</div>
+                    </div>
+
+                    <div class="mt-8 p-5 bg-primary-50 dark:bg-primary-900/30 rounded-lg appear-after">
+                        <h4 class="font-medium mb-3 text-primary-700 dark:text-primary-300">Xu hướng vấn đề dân tộc
+                            trong thời đại toàn cầu hóa</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
+                                </svg>
+                                <span>Tăng cường hợp tác quốc tế, liên kết kinh tế, văn hóa</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
+                                </svg>
+                                <span>Xu hướng đa dạng hóa văn hóa và bảo vệ bản sắc dân tộc</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
+                                </svg>
+                                <span>Đấu tranh vì một trật tự thế giới công bằng, dân chủ</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 5: Mối quan hệ giai cấp - dân tộc - nhân loại -->
+    <section id="slide5" class="slide px-4 py-20 md:px-20 md:py-24 bg-parchment">
+        <div class="bg-pattern"></div>
+        <div class="slide-content max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 slide-from-left">II.3. Mối quan hệ giai cấp - dân tộc - nhân
+                loại</h2>
+
+            <div class="mb-12">
+                <div class="quote slide-from-left">
+                    <p>"Dân tộc, giai cấp và nhân loại là ba phạm trù có mối quan hệ biện chứng, trong đó lợi ích giai
+                        cấp, lợi ích dân tộc và lợi ích nhân loại có sự thống nhất và đấu tranh nội tại."</p>
+                </div>
+            </div>
+
+            <div class="space-y-10">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="slide-from-left">
+                        <h3 class="text-xl md:text-2xl font-semibold mb-6 text-primary-600 dark:text-primary-400">Quan
+                            hệ giữa giai cấp và dân tộc</h3>
+
+                        <div class="space-y-4">
+                            <p>Trong xã hội có giai cấp, mọi dân tộc đều có cấu trúc giai cấp nội tại. Mỗi giai cấp có
+                                vai trò khác nhau trong đấu tranh dân tộc.</p>
+
+                            <div class="img-frame rounded-lg overflow-hidden relative my-6">
+                                <img src="https://images.unsplash.com/photo-1541324791472-3ae2211c28bb?w=800&auto=format&fit=crop"
+                                    alt="Biểu tượng của đấu tranh giai cấp"
+                                    class="w-full object-cover img-vintage aspect-[4/3]">
+                                <div class="img-caption">Biểu tượng của đấu tranh giai cấp</div>
+                            </div>
+
+                            <div class="p-4 bg-sepia-50 dark:bg-sepia-800 rounded-lg fade-up">
+                                <h4 class="font-medium mb-2">Giai cấp công nhân với vấn đề dân tộc</h4>
+                                <p>Giai cấp công nhân có lợi ích cơ bản phù hợp với lợi ích dân tộc và nhân loại.</p>
+                                <p class="mt-2">Cương lĩnh dân tộc của giai cấp công nhân không chỉ giải phóng dân tộc
+                                    khỏi ách đô hộ mà còn giải phóng dân tộc khỏi áp bức bóc lột.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide-from-right">
+                        <h3 class="text-xl md:text-2xl font-semibold mb-6 text-primary-600 dark:text-primary-400">Quan
+                            hệ giữa dân tộc và nhân loại</h3>
+                        <div class="space-y-4">
+                            <p>Dân tộc là một bộ phận của nhân loại. Sự phát triển của nhân loại bao gồm sự phát triển
+                                của mỗi dân tộc, nhưng vượt lên trên phạm vi dân tộc riêng lẻ.</p>
+
+                            <div class="img-frame rounded-lg overflow-hidden relative my-6">
+                                <img src="https://images.unsplash.com/photo-1541896198458-d5e5ca9a1661?w=800&auto=format&fit=crop"
+                                    alt="Liên hợp quốc - biểu tượng của hợp tác nhân loại"
+                                    class="w-full object-cover img-vintage aspect-[4/3]">
+                                <div class="img-caption">Liên hợp quốc - biểu tượng của hợp tác nhân loại</div>
+                            </div>
+
+                            <div class="p-4 bg-sepia-50 dark:bg-sepia-800 rounded-lg fade-up">
+                                <h4 class="font-medium mb-2">Sự thống nhất giữa lợi ích dân tộc và nhân loại</h4>
+                                <p>Đấu tranh giành độc lập, tự do cho dân tộc là đóng góp cho sự tiến bộ của nhân loại.
+                                </p>
+                                <p class="mt-2">Đấu tranh vì hòa bình, dân chủ và tiến bộ xã hội trên phạm vi toàn cầu
+                                    tạo điều kiện cho phát triển dân tộc.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="appear-after">
+                    <h3 class="text-xl md:text-2xl font-semibold mb-6 text-primary-600 dark:text-primary-400">Thống nhất
+                        biện chứng giữa giai cấp - dân tộc - nhân loại</h3>
+
+                    <div class="orbit-container mt-10 mb-14">
+                        <div class="center-circle">
+                            <div>Nhân loại</div>
+                        </div>
+                        <div class="orbit"></div>
+                        <div class="orbital nhanluc">
+                            <div>Giai cấp</div>
+                        </div>
+                        <div class="orbital vandedan">
+                            <div>Dân tộc</div>
+                        </div>
+                        <div class="orbital xuthe">
+                            <div>Tôn giáo</div>
+                        </div>
+                        <div class="orbital quanhedang">
+                            <div>Văn hóa</div>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="p-4 bg-sepia-50 dark:bg-sepia-800 rounded-lg fade-up">
+                            <div class="font-medium mb-2 text-primary-600 dark:text-primary-400">Tính thống nhất</div>
+                            <p>Trong thời đại ngày nay, đấu tranh giai cấp, đấu tranh dân tộc và đấu tranh vì tiến bộ
+                                nhân loại thống nhất với nhau.</p>
+                        </div>
+
+                        <div class="p-4 bg-sepia-50 dark:bg-sepia-800 rounded-lg fade-up">
+                            <div class="font-medium mb-2 text-primary-600 dark:text-primary-400">Tính đa dạng</div>
+                            <p>Cần tôn trọng sự khác biệt, phát huy tính đa dạng văn hóa của các dân tộc trong tiến
+                                trình đấu tranh chung.</p>
+                        </div>
+
+                        <div class="p-4 bg-sepia-50 dark:bg-sepia-800 rounded-lg fade-up">
+                            <div class="font-medium mb-2 text-primary-600 dark:text-primary-400">Định hướng giải quyết
+                            </div>
+                            <p>Kết hợp chủ nghĩa yêu nước chân chính với chủ nghĩa quốc tế trong sáng.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 6: Quan điểm của Hồ Chí Minh -->
+    <section id="slide6" class="slide px-4 py-20 md:px-20 md:py-24 bg-sepia-100 dark:bg-sepia-800">
+        <div class="bg-pattern"></div>
+        <div class="slide-content max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 slide-from-left">Quan điểm của Hồ Chí Minh về vấn đề dân tộc
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="slide-from-left">
+                    <div class="img-frame rounded-lg overflow-hidden relative mb-8">
+                        <img src="https://images.unsplash.com/photo-1589802829696-7b43dab466b1?w=800&auto=format&fit=crop"
+                            alt="Chủ tịch Hồ Chí Minh" class="w-full object-cover img-vintage aspect-[4/3]">
+                        <div class="img-caption">Chủ tịch Hồ Chí Minh - Người sáng lập tư tưởng về chủ nghĩa dân tộc
+                            Việt Nam</div>
+                    </div>
+
+                    <div class="quote mb-8">
+                        <p>"Nước Việt Nam là một, dân tộc Việt Nam là một. Sông có thể cạn, núi có thể mòn, nhưng chân
+                            lý đó không bao giờ thay đổi."</p>
+                        <p class="text-right mt-2">- Hồ Chí Minh</p>
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-4 text-primary-600 dark:text-primary-400">Đặc điểm tư tưởng Hồ
+                        Chí Minh về dân tộc</h3>
+                    <div class="space-y-4">
+                        <div class="fade-up">
+                            <div class="font-medium mb-1 text-primary-600 dark:text-primary-400">Tính nhân dân</div>
+                            <p>Đặt lợi ích của nhân dân, của dân tộc lên trên hết, đấu tranh vì độc lập dân tộc và hạnh
+                                phúc của nhân dân.</p>
+                        </div>
+                        <div class="fade-up">
+                            <div class="font-medium mb-1 text-primary-600 dark:text-primary-400">Tính khoa học</div>
+                            <p>Vận dụng sáng tạo chủ nghĩa Mác-Lênin vào điều kiện cụ thể của Việt Nam, kết hợp vấn đề
+                                dân tộc với vấn đề giai cấp.</p>
+                        </div>
+                        <div class="fade-up">
+                            <div class="font-medium mb-1 text-primary-600 dark:text-primary-400">Tính cách mạng</div>
+                            <p>Kiên quyết đấu tranh chống áp bức dân tộc, giải phóng dân tộc phải gắn với giải phóng xã
+                                hội.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-from-right">
+                    <h3 class="text-xl font-semibold mb-6 text-primary-600 dark:text-primary-400">Nội dung cơ bản tư
+                        tưởng Hồ Chí Minh về dân tộc</h3>
+
+                    <div class="space-y-6">
+                        <div class="p-5 bg-sepia-50 dark:bg-sepia-700 rounded-lg shadow-sm fade-up">
+                            <h4 class="font-medium mb-3">1. Về quyền dân tộc tự quyết</h4>
+                            <p>Mọi dân tộc đều có quyền sống tự do, độc lập; có quyền tự quyết định vận mệnh của mình mà
+                                không chịu sự nô dịch, áp bức từ bất kỳ dân tộc nào khác.</p>
+                        </div>
+
+                        <div class="p-5 bg-sepia-50 dark:bg-sepia-700 rounded-lg shadow-sm fade-up">
+                            <h4 class="font-medium mb-3">2. Về giải phóng dân tộc</h4>
+                            <p>Cuộc đấu tranh giải phóng dân tộc phải do chính dân tộc đó thực hiện dưới sự lãnh đạo của
+                                một đảng cách mạng, với đường lối đúng đắn, khoa học.</p>
+                        </div>
+
+                        <div class="p-5 bg-sepia-50 dark:bg-sepia-700 rounded-lg shadow-sm fade-up">
+                            <h4 class="font-medium mb-3">3. Về đoàn kết dân tộc</h4>
+                            <p>Đoàn kết toàn dân, đoàn kết các dân tộc trong nước trên cơ sở bình đẳng, tôn trọng lẫn
+                                nhau.</p>
+                        </div>
+
+                        <div class="img-frame rounded-lg overflow-hidden relative mt-8">
+                            <img src="https://images.unsplash.com/photo-1597248374161-426f0d6d2fc9?w=800&auto=format&fit=crop"
+                                alt="Đoàn kết các dân tộc" class="w-full object-cover img-vintage aspect-[16/9]">
+                            <div class="img-caption">Đoàn kết các dân tộc - Tư tưởng cốt lõi của Hồ Chí Minh</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 p-6 book-page appear-after">
+                <h3 class="text-xl font-semibold mb-4 text-center text-primary-700 dark:text-primary-300">Vận dụng tư
+                    tưởng Hồ Chí Minh về dân tộc trong bối cảnh hiện nay</h3>
+                <div class="grid md:grid-cols-2 gap-8 mt-6">
+                    <div>
+                        <div class="mb-3 font-medium text-primary-600 dark:text-primary-400">Trong nước</div>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <span>Tăng cường đại đoàn kết dân tộc, đoàn kết các dân tộc thiểu số</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <span>Phát triển kinh tế-xã hội, xóa đói giảm nghèo cho vùng dân tộc thiểu số</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <span>Xây dựng nền văn hóa tiên tiến, đậm đà bản sắc dân tộc</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="mb-3 font-medium text-primary-600 dark:text-primary-400">Trên trường quốc tế</div>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <span>Đa phương hóa, đa dạng hóa quan hệ quốc tế</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <span>Chủ động hội nhập quốc tế, vừa hợp tác vừa đấu tranh</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <span>Kiên quyết, kiên trì bảo vệ chủ quyền và toàn vẹn lãnh thổ</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 7: Tổng kết -->
+    <section id="slide7" class="slide px-4 py-20 md:px-20 md:py-24 bg-parchment">
+        <div class="bg-pattern"></div>
+        <div class="slide-content max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center slide-from-left">Tổng kết: Giai cấp - Dân tộc -
+                Nhân loại</h2>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-sepia-50 dark:bg-sepia-800 rounded-lg p-6 shadow-md fade-up">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-600 dark:text-primary-400">Giai cấp</h3>
+                    </div>
+
+                    <div class="img-frame rounded-lg overflow-hidden relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1494172961521-33799ddd43a5?w=800&auto=format&fit=crop"
+                            alt="Biểu tượng giai cấp công nhân" class="w-full object-cover img-vintage aspect-[16/9]">
+                    </div>
+
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Sản phẩm của sự phát triển kinh tế-xã hội</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Là lực lượng động lực hoặc cản trở xã hội</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-sepia-50 dark:bg-sepia-800 rounded-lg p-6 shadow-md fade-up">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-600 dark:text-primary-400">Dân tộc</h3>
+                    </div>
+
+                    <div class="img-frame rounded-lg overflow-hidden relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1610806822350-a837ae300500?w=800&auto=format&fit=crop"
+                            alt="Lễ hội dân tộc truyền thống" class="w-full object-cover img-vintage aspect-[16/9]">
+                    </div>
+
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Cộng đồng người ổn định hình thành trong lịch sử</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Quyền dân tộc tự quyết là quyền thiêng liêng</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-sepia-50 dark:bg-sepia-800 rounded-lg p-6 shadow-md fade-up">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-600 dark:text-primary-400">Nhân loại</h3>
+                    </div>
+
+                    <div class="img-frame rounded-lg overflow-hidden relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1596450514713-2aa1b5abe445?w=800&auto=format&fit=crop"
+                            alt="Biểu tượng của hợp tác toàn cầu" class="w-full object-cover img-vintage aspect-[16/9]">
+                    </div>
+
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Bao gồm tất cả các dân tộc và giai cấp</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Hướng tới trật tự thế giới công bằng, dân chủ</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="p-6 book-page appear-after">
+                <h3 class="text-xl font-semibold mb-6 text-center text-primary-700 dark:text-primary-300">Bài học thực
+                    tiễn từ mối quan hệ giai cấp - dân tộc - nhân loại</h3>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-4">
+                        <div class="fade-up">
+                            <div class="font-medium text-primary-600 dark:text-primary-400">1. Kết hợp đúng đắn lợi ích
+                                giai cấp, dân tộc và nhân loại</div>
+                            <p>Không tuyệt đối hóa lợi ích giai cấp mà phải đặt trong mối quan hệ với lợi ích dân tộc và
+                                nhân loại.</p>
+                        </div>
+
+                        <div class="fade-up">
+                            <div class="font-medium text-primary-600 dark:text-primary-400">2. Kết hợp chủ nghĩa yêu
+                                nước với chủ nghĩa quốc tế</div>
+                            <p>Tinh thần yêu nước chân chính không mâu thuẫn với đoàn kết quốc tế, mà là tiền đề củng cố
+                                đoàn kết quốc tế.</p>
+                        </div>
+
+                        <div class="fade-up">
+                            <div class="font-medium text-primary-600 dark:text-primary-400">3. Vai trò lãnh đạo của giai
+                                cấp tiên tiến</div>
+                            <p>Giai cấp công nhân và Đảng Cộng sản phải đại diện cho lợi ích chung của dân tộc và tiến
+                                bộ xã hội.</p>
+                        </div>
+                    </div>
+
+                    <div class="img-frame rounded-lg overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1513311068348-19c8fbdc0bb6?w=800&auto=format&fit=crop"
+                            alt="Biểu tượng của hòa bình và đoàn kết"
+                            class="w-full h-full object-cover img-vintage aspect-[4/3]">
+                        <div class="img-caption">Hòa bình và đoàn kết - Mục tiêu chung của nhân loại</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center appear-after">
+                <h3 class="text-xl font-semibold mb-6">Cảm ơn bạn đã theo dõi bài thuyết trình!</h3>
+                <p class="mb-6">Chủ nghĩa duy vật lịch sử: Giai cấp và dân tộc</p>
+
+                <div class="mt-8 text-center text-sepia-500 dark:text-sepia-500">
+                    <p>Kết thúc trình bày</p>
+                    <svg class="w-6 h-6 mx-auto mt-2 animate-bounce" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/Animation.js"></script>
+    <script src="./js/Tailwind.js"></script>
+</body>
+</html>
